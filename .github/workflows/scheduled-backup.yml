@@ -1,0 +1,19 @@
+name: Scheduled Backup
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Schedule daily at midnight UTC
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Run Backup Script
+        run: |
+          # Add your backup script or command here
+          # For example:
+          # ./backup.sh
