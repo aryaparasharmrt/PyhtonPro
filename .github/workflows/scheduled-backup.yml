@@ -2,7 +2,7 @@ name: Scheduled Backup
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # Schedule daily at midnight UTC
+    - cron: '43 15 * * *'  # Schedule daily at midnight UTC
 
 jobs:
   backup:
