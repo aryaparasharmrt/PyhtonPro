@@ -21,9 +21,6 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt  # Adjust based on your project structure
 
-      - name: Run code coverage
-        run: coverage run -m pytest
-
       - name: Upload coverage report
         if: success()
         uses: codecov/codecov-action@v2
