@@ -13,8 +13,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Install dependencies
-        run: npm install  # Use the appropriate command for your language
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
 
-      - name: Security Scan
-        run: npm audit  # Use the appropriate command for your language
+      - name: Install dependencies
+        run: pip install bandit
+
+      - name: Run security scan
+        run: bandit -r .
