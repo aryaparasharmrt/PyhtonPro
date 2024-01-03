@@ -1,0 +1,20 @@
+name: Security Scan
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  security:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm install  # Use the appropriate command for your language
+
+      - name: Security Scan
+        run: npm audit  # Use the appropriate command for your language
