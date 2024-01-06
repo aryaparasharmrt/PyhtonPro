@@ -1,4 +1,4 @@
-name: Repository Management
+name: CI
 
 on:
   push:
